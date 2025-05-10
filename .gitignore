@@ -1,0 +1,6 @@
+.terraform/*
+terraform.tfstate
+CS220-CC-18/*
+terraform-ecr-setup/*
+
+

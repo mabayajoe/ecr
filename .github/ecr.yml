@@ -1,0 +1,21 @@
+name: Terraform AWS ECR Setup
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+    inputs:
+      content:
+        description: 'Enter the content for ECR file'
+        required: true
+        default: 'World'
+
+jobs:
+  terraform:
+    name: Terraform ECR Deployment
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
